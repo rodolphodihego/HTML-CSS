@@ -1,87 +1,108 @@
-/* Variáveis de Cores */
+
 :root {
-    --primary-color: #007BFF;
-    --secondary-color: #333;
-    --background-color: #f4f4f4;
-    --text-color: #333;
-    --link-color: white;
-    --hover-link-color: #ddd;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 2; 
+    animation: gradientAnimation 5s ease infinite; 
+    background: linear-gradient(135deg, #41207c, #000000 ); 
+    background-size: 400% 400%; 
+    --text-color: #f4f4f4; 
 }
 
-/* Estilo Geral */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 2; 
+    animation: gradientAnimation 5s ease infinite; 
+    background: linear-gradient(135deg, #41207c, #000000 ); 
+    background-size: 400% 400%; 
 }
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 .container {
-    width: 70%;
+    width: 80%;
     margin: auto;
-    overflow: hidden;
+    
 }
 
-/* Estilos do Header */
+
 header {
     background: var(--primary-color);
-    color: var(--link-color);
+    color: var(--text-color);
     padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
 }
 
-header h1 {
-    margin: 0;
-    text-align: center;
-}
 
-/* Navegação */
 nav {
     text-align: center;
-    margin-top: 10px;
 }
 
-nav p {
+.social-links {
+    list-style: none;
+    padding: 0;
     margin: 0;
 }
 
-nav a {
-    color: var(--link-color);
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: background 0.3s;
+.social-links li {
+    display: inline;
+    margin: 0 20px;
 }
 
-nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    text-decoration: underline;
+.social-links a {
+    color: #ffffff; 
+    font-size: 24px; 
+    transition: color 0.3s, transform 0.3s; 
 }
 
-/* Estilo do Main */
+.social-links a:hover {
+    color: #000000; 
+    transform: scale(2); 
+}
+
+
 main {
-    background: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-h2 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     color: var(--text-color);
+    line-height: 2; 
+    animation: gradientAnimation 5s ease infinite; 
+    background: linear-gradient(135deg, #41207c, #000000 ); 
+    background-size: 400% 400%; 
 }
 
-/* Estilos do Footer */
+
 footer {
     text-align: center;
     padding: 10px 0;
     background: var(--secondary-color);
-    color: var(--link-color);
+    color: var(--text-color);
     position: relative;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
@@ -89,11 +110,5 @@ footer {
 
     nav {
         text-align: left;
-    }
-
-    nav a {
-        padding: 10px;
-        display: inline-block;
-        margin: 0 5px;
     }
 }
